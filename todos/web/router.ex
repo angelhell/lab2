@@ -11,15 +11,20 @@ defmodule Todos.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
-    resources "/todos", TodoController, only: [:index]
+
   end
 
   scope "/", Todos do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-  end
 
+  end
+  scope "/api", Todos do
+    pipe_through :api
+
+    resources "/todos", TodoController, only: [:index,:show]
+  end
   # Other scopes may use custom stacks.
   # scope "/api", Todos do
   #   pipe_through :api

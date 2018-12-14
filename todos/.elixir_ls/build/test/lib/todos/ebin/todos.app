@@ -11,6 +11,7 @@
                         'Elixir.Todos.PageController','Elixir.Todos.PageView',
                         'Elixir.Todos.Repo','Elixir.Todos.Router',
                         'Elixir.Todos.Router.Helpers','Elixir.Todos.Todo',
+                        'Elixir.Todos.TodoController','Elixir.Todos.TodoView',
                         'Elixir.Todos.UserSocket','Elixir.Todos.Web']},
               {registered,[]},
               {vsn,"0.0.1"},
